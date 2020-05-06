@@ -11,10 +11,11 @@ MyWidget::MyWidget(QWidget *parent)
     layout->addWidget(slider.get());
     setLayout(layout.get());
     connect(button.get(), SIGNAL(clicked()), this, SLOT(printValue()));
+    connect(slider.get(), &QSlider::valueChanged, this, &MyWidget::printValue);
 }
 
 void MyWidget::printValue() {
     int value = slider->value();
-    edit->setText(QString::number(value));
+    edit->setText("hjj" + QString::number(value));
 }
 
