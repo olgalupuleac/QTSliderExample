@@ -1,13 +1,13 @@
 #include "MyWidget.h"
 #include "ui_mainwindow.h"
 
-MyWidget::MyWidget(QWidget *parent)
+MyWidget::MyWidget(QWidget *parent, QLineEdit* e)
     : QWidget(parent),
       slider(new QSlider),
-     button(new QPushButton("Print")),  edit(new QLineEdit), layout(new QVBoxLayout)
+     button(new QPushButton("Print")),  edit(e), layout(new QVBoxLayout)
 {
     layout->addWidget(button.get());
-    layout->addWidget(edit.get());
+   // layout->addWidget(edit.get());
     layout->addWidget(slider.get());
     setLayout(layout.get());
     connect(button.get(), SIGNAL(clicked()), this, SLOT(printValue()));

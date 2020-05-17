@@ -18,11 +18,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     MyWidget.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    sec_window.cpp
 
 HEADERS += \
     MyWidget.h \
-    mainwindow.h
+    mainwindow.h \
+    sec_window.h
 
 FORMS += \
     mainwindow.ui

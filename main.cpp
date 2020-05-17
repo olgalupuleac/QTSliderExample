@@ -10,8 +10,10 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    MyWidget widget;
-    w.setCentralWidget(&widget);
+    //MyWidget widget;
+    //QPushButton button;
+    //button.connect(&button, SIGNAL(clicked()), &widget, SLOT(MyWidget::show));
+    //w.setCentralWidget(&button);
     w.show();
 
     return a.exec();

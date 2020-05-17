@@ -6,6 +6,7 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QSlider>
+#include "sec_window.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,6 +20,10 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 private:
+    QLineEdit* edit;
     Ui::MainWindow *ui;
+    QPushButton* button;
+    sec_window* window;
+    QVBoxLayout* layout;
 };
 #endif // MAINWINDOW_H
